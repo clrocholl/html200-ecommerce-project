@@ -37,8 +37,6 @@ nav a {
   color: white;
 }
 
-/* LARGE */
-
 .navigation {
   list-style: none;
   margin: 0;
@@ -46,23 +44,6 @@ nav a {
   display: flex;
   justify-content: space-around;
   padding: 1rem;
-}
-
-/* MEDIUM */
-
-@media all and (max-width: 110px) {
-  .navigation {
-    justify-content: space-around;
-  }
-}
-
-/* SMALL */
-
-@media all and (max-width: 600px) {
-  .navigation {
-    flex-direction: column;
-    text-align: center;
-  }
 }
 
 /**************** HERO *****************/
@@ -89,22 +70,6 @@ h1 {
   color: #2D394C;
 }
 
-/* MEDIUM */
-
-@media all and (max-width: 110px) {
-  h1 {
-    justify-content: space-around;
-  }
-}
-
-/* SMALL */
-
-@media all and (max-width: 600px) {
-  h1 {
-    flex-direction: column;
-    text-align: center;
-  }
-}
 
 /**************** ASIDE MAILING LIST ****************/
 
@@ -117,7 +82,7 @@ input[type="submit"] {
   color: white;
 }
 
-/*********** PRODUCTS SECTION ***********/
+/**************** PRODUCTS SECTION ****************/
 
 section {
   padding: 0 .75rem;
@@ -144,7 +109,7 @@ h3 {
   background: #ffffff;
   height: 100%;
   border: 1px solid #525d68;
-  box-shadow: 3px 3px #f5f6f7;
+  box-shadow: 3px 3px #EEF7FA;
 }
 
 .item {
@@ -162,6 +127,10 @@ h3 {
   margin: .5em;
 }
 
+.img-fluid {
+  padding: 1rem;
+}
+
 /**************** FOOTER ****************/
 
 footer {
@@ -174,3 +143,42 @@ footer {
 .copyright {
   color: #f5f6f7;
 }
+
+/**************** MEDIA QUERIES ****************/
+
+@media only screen and (min-width: 110px) and (max-width: 650px) {
+  html {
+    width: 100%;
+    margin: 0;
+  }
+
+  div[class^="col-"] {
+    width: 100%;
+  }
+
+  ul,
+  nav {
+    display: block;
+    text-align: center;
+    padding: 0;
+  }
+  h1 {
+    justify-content: space-around;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .box {
+    width: 100%;
+  }
+  
+  .card {
+  background: #EEF7FA;
+}
+
+/**************** TRANSITIONS ****************/
+
+.img-fluid:hover {
+  transform: scale(1.1);
+}
+
